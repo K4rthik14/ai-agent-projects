@@ -50,5 +50,12 @@ agent_executor = AgentExecutor(agent = agent, tools= [],verbose=True)
 raw_response = agent_executor.invoke({"query":"What is the AI Agents"})
 
 print(raw_response)
-#response = llm.invoke("How to be a billionaire in india in tech buisness")
-#print(response)
+
+
+try:
+    structured_response = parser.parse(raw_response.get("output")[0]["text"])
+except Exception as e:
+    print("Error Parsing Response",e,"Raw Respose - ", raw_response)
+    
+
+print(structured_response.topic)
