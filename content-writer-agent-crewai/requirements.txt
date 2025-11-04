@@ -1,0 +1,11 @@
+crewai
+crewai_tools
+crewai
+crewai-tools
+qdrant-client
+youtube-search-python
+openai
+langchain
+pydantic
+load_dotenv
+langchain_google_genai
